@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+</head>
+<body>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      color: #000000;
+      margin-top: 30px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="password"],
+    input[type="number"],
+    input[type="range"],
+    select,
+    input[type="file"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      background-color: #ff0000;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: #ff0000;
+    }
+
+    p {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Formulário</h1>
+
+<form onsubmit="return validarFormulario(event)">
+  <div>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome">
+  </div>
+
+  <div>
+    <label for="nickname">Nickname:</label>
+    <input type="text" id="nickname" name="nickname">
+  </div>
+
+  <div>
+    <label for="birthday">Quando é seu aniversário?:</label>
+    <input type="date" id="birthday" name="birthday">
+  </div>
+
+  <div>
+    <label for="email">Insira seu email:</label>
+    <input type="email" id="email" name="email">
+  </div>
+
+  <div>
+    <label for="senha">Crie uma senha:</label>
+    <input type="password" id="senha" name="senha" minlength="8">
+  </div>
+
+  <div>
+    <label for="senha">Confirme sua senha:</label>
+    <input type="password" id="senha" name="senha" minlength="8">
+  </div>
+
+  <div>
+    <p>Em que ano o roblox foi criado:</p>
+    <input type="radio" id="ano" name="roblox_ano" value="2000">
+    <label for="ano">2000</label><br>
+    <input type="radio" id="ano" name="roblox_ano" value="2006">
+    <label for="css">2006</label><br>
+    <input type="radio" id="ano" name="roblox_ano" value="2010">
+    <label for="javascript">2010</label><br>
+  </div>
+
+  <div>
+    <label for="quantity">Classificação indicativa do Roblox:</label>
+    <input type="number" id="quantity" name="quantity">
+  </div>
+
+  <div>
+    <p>Qual seu subgênero favorito no Roblox?:</p>
+    <input type="checkbox" id="subgenero1" name="subgenero1" value="ação">
+    <label for="subgenero1">Ação</label><br>
+    <input type="checkbox" id="subgenero2" name="subgenero2" value="aventura">
+    <label for="subgenero2">Aventura</label><br>
+    <input type="checkbox" id="subgenero3" name="subgenero3" value="simulação">
+    <label for="subgenero3">Simulação de vida</label><br>
+  </div>
+
+  <div>
+    <label for="minigames">Escolha um jogo:</label>
+    <select name="minigames" id="minigames">
+      <option value="dti">Dress to impress</option>
+      <option value="mm2">Murder Mystery 2</option>
+      <option value="ftf">Flee the facility</option>
+      <option value="bf">Blox Fruits</option>
+      <option value="piggy">Piggy</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="like">O quanto você gosta do Roblox?:</label>
+    <input type="range" id="vol" name="vol" min="0" max="110">
+  </div>
+
+  <div>
+    <label for="myfile">Insira aqui uma foto no seu jogo favorito:</label>
+    <input type="file" id="myfile" name="myfile">
+  </div>
+
+  <div>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+  </div>
+</form>
+
+<script src="formulario.js"></script>
+
+</body>
+</html>
